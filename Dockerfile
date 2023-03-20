@@ -16,7 +16,7 @@ ENV GITEA_URL="" \
     TOKEN=""
 
 COPY --from=build /out/act_runner /runner/act_runner
-RUN chmod +x /runner/act_runner
+COPY start.sh /start.sh
+RUN chmod +x /runner/act_runner /start.sh
 
-CMD /runner/act_runner register --instance ${GITEA_URL} --token ${TOKEN} --no-interactive \
-    && /runner/act_runner daemon
+ENTRYPOINT [ "/start.sh" ]
