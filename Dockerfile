@@ -16,7 +16,7 @@ ENV GITEA_URL="" \
     TOKEN=""
 
 COPY --from=build /out/act_runner /runner/act_runner
-COPY start.sh /start.sh
-RUN chmod +x /runner/act_runner /start.sh
+COPY start.sh /runner/
+RUN chmod +x /runner/act_runner /runner/start.sh
 
-ENTRYPOINT [ "/start.sh" ]
+ENTRYPOINT [ "/runner/start.sh" ]
