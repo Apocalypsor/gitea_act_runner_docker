@@ -1,0 +1,3 @@
+[submodule "act_runner"]
+	path = act_runner
+	url = https://gitea.com/gitea/act_runner
