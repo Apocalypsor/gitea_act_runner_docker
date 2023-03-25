@@ -7,6 +7,7 @@ services:
   runner:
     container_name: gitea-runner
     image: ghcr.io/apocalypsor/act_runner:latest
+    network_mode: "host"
     restart: always
     environment:
       - GITEA_URL=
