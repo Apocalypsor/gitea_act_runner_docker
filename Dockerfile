@@ -13,7 +13,8 @@ LABEL maintainer="sudo@dov.moe"
 WORKDIR /runner
 
 ENV GITEA_URL="" \
-    TOKEN=""
+    TOKEN="" \
+    RUNNER_NAME=""
 
 COPY --from=build /out/act_runner /runner/act_runner
 COPY start.sh /runner/
