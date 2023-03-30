@@ -1,5 +1,11 @@
 # gitea_act_runner_docker
 
+Step 1: Create file `runner`
+```bash
+touch runner && chmod 777 runner
+```
+
+Step 2:
 ```yaml
 version: "3"
 
